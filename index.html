@@ -48,8 +48,11 @@
       h1 {
         font-size: 2rem;
       }
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
-
 
   </style>
 </head>
@@ -60,14 +63,14 @@
   <script>
     var userAgent = navigator.userAgent;
     if (userAgent.indexOf("Android") != -1) {
-      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto; margin : 1em;"></a>');
+      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto; margin : 6px;"></a>');
     }
     else if (userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
-      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 1em;"></a>');
+      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 6px;"></a>');
     }
     else {
-      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto;margin : 1em;"></a>');
-      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 1em;"></a>');
+      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto;margin : 6px;"></a>');
+      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 6px;"></a>');
     }
   </script>
 </div>
