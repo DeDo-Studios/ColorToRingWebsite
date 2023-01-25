@@ -46,7 +46,7 @@
     @keyframes falling {
       0% {
         top: -20px;
-        left: -20px;
+        left: calc(50% + random() * 200px - 100px);
       }
       100% {
         top: 100%;
@@ -56,7 +56,6 @@
   </style>
 </head>
 <body>
-  <h1>ColorToRing</h1>
   <div class="buttons-container">
     <script>
     var userAgent = navigator.userAgent;
@@ -71,16 +70,18 @@
         document.write('<a href="https://itunes.apple.com/us/app/colortoring/id1234567890"><img src="apple_app_store_btn.png" alt="Apple App Store"></a>');
 }
 </script>
+
   </div>
-  <div class="falling-ball"></div>
-  <div class="falling-ball"></div>
-  <div class="falling-ball"></div>
+  <h1 style="position:relative; top:50%;">ColorToRing</h1>
+  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
+  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
+  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
   <!-- weitere fallenen Bälle hinzufügen -->
   <script>
     /* JavaScript für die Hintergrundfarbänderung */
     setTimeout(function() {
       document.body.style.backgroundColor = "white";
     }, 2000);
- </script>
+  </script>
 </body>
 </html>
