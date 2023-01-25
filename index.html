@@ -1,87 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>ColorToRing</title>
+  <meta name="description" content="Join the fun & challenge of ColorToRing! Improve your skills by catching circles of the same color.">
+  <meta name="robots" content="noindex,follow">
+
   <style>
-    /* CSS für Design und Animationen */
+    /* CSS für Design */
     body {
-      background-color: #ddd;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      overflow: hidden;
     }
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: black;
+      text-align: center;
+    }
+
     h1 {
       font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
       font-size: 3em;
       text-align: center;
-      animation: titleDrop 2s ease-in-out;
-    }
-    /* Animation für den Fall des "I" Punkts */
-    @keyframes titleDrop {
-      0% { transform: translateY(-50px); }
-      70% { transform: translateY(50px); }
-      100% { transform: translateY(0); }
+      margin: 50px 0;
     }
     /* CSS für die Buttons */
     .buttons-container {
       display: flex;
       justify-content: center;
       align-items: center;
+
     }
-    .app-store-btn {
-      display: inline-block;
-      background-color: transparent;
-      margin: 0 10px;
-    }
-    .app-store-btn img {
-      width: 150px;
-    }
-    /* CSS für die fallenen Bälle */
-    .falling-ball {
+    .container {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: #fff;
-      animation: falling 3s ease-in-out infinite;
+      top: 50%;
+      left: 50%;
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
     }
-    /* Animation für die fallenen Bälle */
-    @keyframes falling {
-      0% {
-        top: -20px;
-        left: calc(50% + random() * 200px - 100px);
-      }
-      100% {
-        top: 100%;
-        left: calc(50% + random() * 200px - 100px);
+
+    @media only screen and (max-width: 767px) {
+      .app-store-btn img {
+        width: 50%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="buttons-container">
-    <script>
+<div class="container">
+<h1>ColorToRing</h1>
+<div class="buttons-container">
+  <script>
     var userAgent = navigator.userAgent;
     if (userAgent.indexOf("Android") != -1) {
-       document.write('<a href="https://play.google.com/store/apps/details?id=com.colortoring"><img src="google_play_store_btn.png" alt="Google Play Store"></a>');
-    } 
-    if (userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
-        document.write('<a href="https://itunes.apple.com/us/app/colortoring/id1234567890"><img src="apple_app_store_btn.png" alt="Apple App Store"></a>');
-    } 
-    if (!(userAgent.indexOf("Android") != -1) && !(userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1)) {
-        document.write('<a href="https://play.google.com/store/apps/details?id=com.colortoring"><img src="google_play_store_btn.png" alt="Google Play Store"></a>');
-        document.write('<a href="https://itunes.apple.com/us/app/colortoring/id1234567890"><img src="apple_app_store_btn.png" alt="Apple App Store"></a>');
-}
-</script>
-
-  </div>
-  <h1 style="position:relative; top:50%;">ColorToRing</h1>
-  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
-  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
-  <div class="falling-ball" style="background-image: url('ball.png'); background-size: contain;"></div>
-  <!-- weitere fallenen Bälle hinzufügen -->
-  <script>
-    /* JavaScript für die Hintergrundfarbänderung */
-    setTimeout(function() {
-      document.body.style.backgroundColor = "white";
-    }, 2000);
+      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto; margin : 1em;"></a>');
+    }
+    else if (userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
+      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 1em;"></a>');
+    }
+    else {
+      document.write('<a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing"><img src="google_play_store_btn.png" alt="Google Play Store" style="height: 42px; width: auto;margin : 1em;"></a>');
+      document.write('<a href="https://apps.apple.com/us/app/colortoring/id1666300938"><img src="apple_app_store_btn.png" alt="Apple App Store" style="height: 42px; width: auto;margin : 1em;"></a>');
+    }
   </script>
+</div>
+</div>
 </body>
+<footer>
+
+  <p style="text-align: center"> Copyright &copy;
+    <script>document.write(new Date().getFullYear())</script>
+    <a href="https://www.dedostudios.com">DeDo Studios UG (haftungsbeschränkt)</a>
+  </p>
+</footer>
 </html>
