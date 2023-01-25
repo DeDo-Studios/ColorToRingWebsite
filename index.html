@@ -70,6 +70,16 @@
   <div class="falling-ball"></div>
   <!-- weitere fallenen Bälle hinzufügen -->
   <script>
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Android") != -1) {
+        window.location.replace("https://www.google.com");
+    } else if (userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
+        window.location.replace("https://www.apple.com");
+    } else {
+        window.location.replace("https://www.microsoft.com");
+    }
+
+    
     /* JavaScript für die Hintergrundfarbänderung */
     setTimeout(function() {
       document.body.style.backgroundColor = "white";
