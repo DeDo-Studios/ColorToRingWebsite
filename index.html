@@ -1,1 +1,69 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ColorToRing</title>
+  <style>
+    /* CSS für Design und Animationen */
+    body {
+      background-color: #ddd;
+    }
+    h1 {
+      font-family: Arial;
+      font-size: 3em;
+      text-align: center;
+      animation: titleDrop 0.5s ease-in-out;
+    }
+    /* Animation für den Fall des "I" Punkts */
+    @keyframes titleDrop {
+      0% { transform: translateY(-50px); }
+      70% { transform: translateY(50px); }
+      100% { transform: translateY(0); }
+    }
+    /* CSS für die Buttons */
+    .app-store-btn {
+      display: inline-block;
+      background-color: #fff;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    /* CSS für die fallenen Bälle */
+    .falling-ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      animation: falling 3s ease-in-out infinite;
+    }
+    /* Animation für die fallenen Bälle */
+    @keyframes falling {
+      0% {
+        top: -20px;
+        left: -20px;
+      }
+      100% {
+        top: 100%;
+        left: calc(50% + random() * 200px - 100px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>ColorToRing</h1>
+  <a href="https://apps.apple.com/us/app/colortoring/id1666300938" class="app-store-btn">Apple App Store</a>
+  <a href="https://play.google.com/store/apps/details?id=com.DeDoStudios.ColorToRing" class="app-store-btn">Google Play Store</a>
+  <div class="falling-ball"></div>
+  <div class="falling-ball"></div>
+  <div class="falling-ball"></div>
+  <!-- weitere fallenen Bälle hinzufügen -->
+  <script>
+    /* JavaScript für die Hintergrundfarbänderung */
+    setTimeout(function() {
+      document.body.style.backgroundColor = "white";
+    }, 500);
+  </script>
+</body>
+</html>
